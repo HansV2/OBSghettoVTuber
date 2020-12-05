@@ -16,7 +16,8 @@ BrowserSource HTML/Javascript to switch one image with another depending on your
 - save
 - open the player.html in your browser and allow acces to the mic (to check if the voice-levels are to your liking)
 - if the switching of the images does not match your voice-levels adjust the number behind 'threshold' within 'mic.js'
-- go into OBS and create a new BrowserSource
+- add the parameter '--enable-media-stream' to your OBS-shortcut (so that the BrowserSource can acces your mic)
+- open OBS and create a new BrowserSource
 - choose 'Local' and select the player.html
 
 # Usage - remote
