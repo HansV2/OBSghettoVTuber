@@ -1,8 +1,8 @@
 /////////////////////////////////////////// CONFIG START
 	var urlParams = new URLSearchParams(window.location.search);
 	
-	var active = urlParams.get("active") || 'talking.gif' 					// image/gif that is displayed when the level is above the threshold
-	var inactive = urlParams.get("inactive") || 'silent.gif' 				// image/gif that is displayed when the level is below the threshold
+	var active = urlParams.get("active") || 'YOUR_IMAGE_HERE_WHEN_YOU_ARE_TALKING.gif' 					// image/gif that is displayed when the level is above the threshold
+	var inactive = urlParams.get("inactive") || 'YOUR_IMAGE_HERE_WHEN_YOU_ARE_NOT_TALKING.gif' 				// image/gif that is displayed when the level is below the threshold
 	
 	var options = {
         on:                         false,  								//if sound level is higher then thresold and longer then minimum delta time
