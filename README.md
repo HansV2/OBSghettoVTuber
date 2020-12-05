@@ -31,3 +31,6 @@ if you choose to host mic.js and player.html on a webserver you can dynamically 
 - tested with ".gif", but it should support everything that is supported by an img-tag (see: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 
 
+
+If you found this helpful or want to see this piece of code in action you can drop by my twitch: https://www.twitch.tv/hansv2
+
