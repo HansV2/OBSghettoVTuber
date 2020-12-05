@@ -1,8 +1,15 @@
 /////////////////////////////////////////// CONFIG START
 	var urlParams = new URLSearchParams(window.location.search);
 	
-	var active = urlParams.get("active") || 'YOUR_IMAGE_HERE_WHEN_YOU_ARE_TALKING.gif' 					// image/gif that is displayed when the level is above the threshold
-	var inactive = urlParams.get("inactive") || 'YOUR_IMAGE_HERE_WHEN_YOU_ARE_NOT_TALKING.gif' 				// image/gif that is displayed when the level is below the threshold
+	var active = urlParams.get("active") || 'talking.gif' 					// image/gif that is displayed when the level is above the threshold
+	var inactive = urlParams.get("inactive") || 'silent.gif' 				// image/gif that is displayed when the level is below the threshold
+	var threshold = 1.5;													//minmum sound level above noise level to trigger start event
+	var delay = 150;														//delay in ms before 'active' triggers after level got above threshold
+	
+	
+	
+	
+	
 	
 	var options = {
         on:                         false,  								//if sound level is higher then thresold and longer then minimum delta time
@@ -11,11 +18,11 @@
         level:                      0,      								//raw level
         normalized:                 0,      								//normalized level (with dynamic noise level)
         noise:                      0,      								//raw noise level
-        minSoundLevel:              urlParams.get("threshold") || 1.5,   	//minmum sound level above noise level to trigger start event
-        minSoundLevel_normalized:   urlParams.get("threshold") || 1.5,   	//normalized minimum sound level above noise level to trigger start event
+        minSoundLevel:              urlParams.get("threshold") || threshold,   	//minmum sound level above noise level to trigger start event
+        minSoundLevel_normalized:   urlParams.get("threshold") || threshold,   	//normalized minimum sound level above noise level to trigger start event
         max:                        60,
         max_normalized:             60,
-        minDeltaTime:               urlParams.get("delay") || 150,     		//delay in ms before 'active' triggers after level got above threshold
+        minDeltaTime:               urlParams.get("delay") || delay,     		//delay in ms before 'active' triggers after level got above threshold
         duration:                   urlParams.get("release") || 0 			//time in ms that 'active' should persist after level dropped below threshold
     };
 /////////////////////////////////////////// CONFIG END
