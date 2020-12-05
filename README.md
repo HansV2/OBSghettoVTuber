@@ -19,7 +19,7 @@ BrowserSource HTML/Javascript to switch one image with another depending on your
 - go into OBS and create a new BrowserSource
 - choose 'Local' and select the player.html
 
-# Usage remote
+# Usage - remote
 if you choose to host mic.js and player.html on a webserver you can dynamically change paramaters and images via the following parameter:
 - active (image/gif that is displayed when the level is above the threshold)
 - inactive (image/gif that is displayed when the level is below the threshold)
